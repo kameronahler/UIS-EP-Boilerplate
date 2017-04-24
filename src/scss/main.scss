@@ -6,8 +6,8 @@ Engaging Plans Styling Boilerplate
 /* -----------------
 EP Mixins (required)
 ----------------- */
-@import "src/scss/partials/ep/ep-mixins";
-@import "src/scss/partials/ep/vars";
+@import "src/scss/partials/ep-mixins";
+@import "src/scss/partials/vars";
 
 
 
@@ -57,7 +57,7 @@ Webform Page Styling
 Webforms With Grid Questions
 ------------------------------- */
 /* Fix for grid question type styling - especially mobile */
-@import "src/scss/grid-questions/grid-questions";
+@import "src/scss/partials/ep/grid-questions/grid-questions";
 
 
 
