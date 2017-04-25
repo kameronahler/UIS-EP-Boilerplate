@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                     cwd: 'src/scss',
                     src: ['*.scss'],
                     dest: 'css',
-                    ext: '.min.css'
+                    ext: '.css'
                 }]
             },
             build:{
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     cwd: 'src/scss',
                     src: ['*.scss'],
                     dest: 'css',
-                    ext: '.min.css'
+                    ext: '.css'
                 }]
             }
         },
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                     cwd: 'css',
                     src: ['*.css'],
                     dest: 'css',
-                    ext: '.min.css'
+                    ext: '.css'
                 }]
             },
             build: {
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                     cwd: 'css',
                     src: ['*.css'],
                     dest: 'css',
-                    ext: '.min.css'
+                    ext: '.css'
                 }]
             }
         },
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 files: 'src/scss/**/*.scss',
-                tasks: ['sass:dev', 'postcss:dev', 'notify:sass'],
+                tasks: ['sass:dev', 'px_to_rem:dev', 'postcss:dev', 'notify:sass'],
                 options: {
                     livereload: true
                 }
