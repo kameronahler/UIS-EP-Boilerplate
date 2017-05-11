@@ -1,5 +1,5 @@
 /*
-npm install --save-dev grunt time-grunt grunt-px-to-rem grunt-postcss cssnano autoprefixer grunt-sass grunt-contrib-watch grunt-notify
+npm install --save-dev grunt time-grunt grunt-px-to-rem grunt-postcss cssnano autoprefixer css-mqpacker grunt-sass grunt-contrib-watch grunt-notify
 */
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
@@ -87,6 +87,7 @@ module.exports = function(grunt) {
                             calc: false,
                             colorMin: false,
                             convertValues: false,
+                            discardComments: false,
                             discardUnused: false,
                             zindex: false,
                             reduceIdents: false,
@@ -98,6 +99,13 @@ module.exports = function(grunt) {
                             mergeRules:true,
                             core:false
                         })
+                        //require('css-mqpacker')({
+                        //    expand: true,
+                        //    cwd: 'src/css/',
+                        //    src: '*.css',
+                        //    dest: 'css',
+                        //    sort:true
+                        //})
                     ]
                 },
                 src: 'css/*.css'
@@ -123,6 +131,13 @@ module.exports = function(grunt) {
                             safe: true,
                             mergeRules:true
                         })
+                        //require('css-mqpacker')({
+                        //    expand: true,
+                        //    cwd: 'src/css/',
+                        //    src: '*.css',
+                        //    dest: 'css',
+                        //    sort:true
+                        //})
                     ]
                 },
                 src: 'css/*.css'
